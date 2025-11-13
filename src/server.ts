@@ -18,6 +18,8 @@ app.get('/health', (req, res) => {
   // res.send('<button>click</button>')
 })
 
+app.post('/cake', () => {})
+
 // imports as a named import or as a default
 // gives the option to name it
 // Export the app for use in other modules (like tests)
