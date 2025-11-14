@@ -8,6 +8,9 @@ its in scrips, which is like a makefile, you just call dev, or whatever its call
 => npm run dev
 
 
+if you want to import a module you have to export it first.
+the file I create is something nobody can acess, unless i export it.
+
 ## Error responses
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status

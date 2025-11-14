@@ -1,4 +1,7 @@
 import express from 'express'
+import authRoutes from './routes/authRoutes.ts'
+import userRoutes from './routes/userRoutes.ts'
+import habitRoutes from './routes/habitRoutes.ts'
 
 // create app and expose server (app = server)
 const app = express()
@@ -21,6 +24,14 @@ app.get('/health', (req, res) => {
 app.post('/cake/:name/:id', (req, res) => {
 	res.json(req.params)
 })
+
+//no matter the verb, whenever it has /api/auth
+// mounting the router auth at this path (router now doesn't need to know path before it in authRoutes.ts)
+app.use('/api/auth', authRoutes)
+
+app.use('/api/user', userRoutes)
+
+app.use('/api/habits', habitRoutes)
 
 // imports as a named import or as a default
 // gives the option to name it
