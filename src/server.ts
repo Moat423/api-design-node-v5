@@ -18,7 +18,9 @@ app.get('/health', (req, res) => {
   // res.send('<button>click</button>')
 })
 
-app.post('/cake', () => {})
+app.post('/cake/:name/:id', (req, res) => {
+	res.json(req.params)
+})
 
 // imports as a named import or as a default
 // gives the option to name it
